@@ -1,0 +1,340 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+*,
+*::before,
+*::after{
+
+    transition:
+        background-color .45s ease,
+        color .45s ease,
+        border-color .45s ease,
+        fill .45s ease,
+        stroke .45s ease,
+        box-shadow .45s ease;
+
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin: 0;
+    
+    background:#f5f5f5;
+    font-family:Arial, Helvetica, sans-serif;
+     transition:
+        background-color .45s ease,
+        color .45s ease;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:30px;          /* Espaço entre os cards */
+    flex-wrap:wrap;    /* Quebra linha no celular */
+    padding:50px ;
+}
+
+.card-planos{
+
+    width:340px;
+
+    margin: 15px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:
+    transform .45s cubic-bezier(.22,1,.36,1),
+    box-shadow .45s;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.12);
+
+}
+
+.card-planos.active{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+    0 30px 70px rgba(0,0,0,.18);
+
+}
+
+/*========================*/
+
+.topo{
+
+    background:#FFD200;
+
+    color:#111;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+.topo p{
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+}
+
+.topo h2{
+
+    font-size:72px;
+
+    line-height:70px;
+
+}
+
+.topo .mega{
+
+    display:block;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+}
+
+.topo small{
+
+    display:block;
+
+    margin-top:10px;
+
+}
+
+/*========================*/
+
+.infos{
+
+     padding:30px;
+    background:#ffffff;
+    color:#222;
+
+    transition:
+        background .45s ease,
+        color .45s ease;
+
+}
+
+/*========================*/
+
+.hidden{
+
+    height:0;
+
+    overflow:hidden;
+
+    transition:
+    height .45s cubic-bezier(.22,1,.36,1);
+
+}
+
+/*========================*/
+
+.height{
+
+    opacity:0;
+
+    transform:translateY(-15px);
+
+    transition:
+    opacity .35s,
+    transform .35s;
+
+}
+
+.card-planos.active .height{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.height h4{
+
+    margin-bottom:20px;
+
+}
+
+.height p{
+
+    margin:12px 0;
+
+    color:#555;
+
+}
+
+/*========================*/
+
+.preco{
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.preco small{
+
+    color:#888;
+
+}
+
+.preco h3{
+
+    font-size:56px;
+
+    margin-top:10px;
+
+}
+
+.preco span{
+
+    font-size:24px;
+
+}
+
+.card-planos.active .preco{
+
+    margin-top:20px;
+
+}
+
+/*========================*/
+
+.desc{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#666;
+
+}
+
+/*========================*/
+
+.botao{
+
+    margin-top:30px;
+
+    opacity:0;
+
+    transform:translateY(35px);
+
+    transition:
+    opacity .35s,
+    transform .35s;
+
+}
+
+.card-planos.active .botao{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.botao a{
+
+    display:block;
+
+    text-align:center;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    background:#FFD200;
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.botao a:hover{
+
+    background:#ffc400;
+
+}
+
+nav{
+    color: #f5f5f5;
+}
+
+.lang-btn{
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    border:1px solid #d1d5db;
+
+    background:transparent;
+
+    cursor:pointer;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.dark .lang-btn{
+
+    border-color:#444;
+
+    color:#fff;
+
+}
+
+.lang-btn:hover{
+
+    background:#f5f5f5;
+
+}
+
+.dark .lang-btn:hover{
+
+    background:#2b2b2b;
+
+}
+
+.lang-btn.active{
+
+    background:#facc15;
+
+    border-color:#facc15;
+
+    color:#111;
+
+}

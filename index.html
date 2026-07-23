@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SaraNet | Fibra Óptica de Alta Velocidade</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800;900&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="saranet.css">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#ffdbcd",
+                    "on-secondary-container": "#636262",
+                    "tertiary": "#0062a1",
+                    "surface-variant": "#e2e2e2",
+                    "primary-container": "#ff6600",
+                    "surface-dim": "#dadada",
+                    "on-error": "#ffffff",
+                    "surface": "#f9f9f9",
+                    "inverse-on-surface": "#f1f1f1",
+                    "on-tertiary-fixed": "#001d35",
+                    "on-surface-variant": "#5a4136",
+                    "tertiary-fixed-dim": "#9ccaff",
+                    "secondary-fixed": "#e5e2e1",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#00497b",
+                    "on-secondary-fixed-variant": "#474746",
+                    "error": "#ba1a1a",
+                    "on-surface": "#1a1c1c",
+                    "outline-variant": "#e3bfb1",
+                    "background": "#f9f9f9",
+                    "on-background": "#1a1c1c",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary": "#5f5e5e",
+                    "inverse-surface": "#2f3131",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "primary": "#a33e00",
+                    "on-primary-container": "#561d00",
+                    "on-error-container": "#93000a",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e8e8e8",
+                    "secondary-container": "#e2dfde",
+                    "surface-bright": "#f9f9f9",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#003155",
+                    "inverse-primary": "#ffb596",
+                    "on-primary-fixed-variant": "#7c2e00",
+                    "surface-container": "#eeeeee",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#8e7164",
+                    "on-primary-fixed": "#360f00",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-tint": "#a33e00",
+                    "primary-fixed-dim": "#ffb596",
+                    "tertiary-fixed": "#d0e4ff",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#009cfc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "section-gap": "120px",
+                    "gutter": "24px",
+                    "margin-desktop": "40px",
+                    "margin-mobile": "16px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "label-bold": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-bold": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .dark body {
+            background-color: #131313;
+            color: #f1f1f1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+        }
+        .dark .glass-card {
+            background: rgba(30, 30, 30, 0.7);
+            border-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .glass-card:hover {
+            border-color: #ff6600;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+        }
+        .dark .glass-card:hover {
+            background: rgba(40, 40, 40, 0.9);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+        .glow-orange {
+            box-shadow: 0 4px 15px rgba(255, 102, 0, 0.25);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-line::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: -1;
+        }
+        .dark .step-line::after {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        @media (max-width: 768px) {
+            .step-line::after {
+                display: none;
+            }
+        }
+        .roxo{
+            color: #9900a7;
+        }
+    </style>
+</head>
+<body class="bg-background dark:bg-[#131313] text-on-background dark:text-[#f1f1f1]">
+<!-- Section 1: Header (TopAppBar) -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-[#131313]/80 backdrop-blur-xl border-b border-black/5 dark:border-white/5 h-16 flex justify-between items-center px-margin-mobile md:px-margin-desktop">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">language</span>
+<h1 class="font-display-lg-mobile text-headline-lg-mobile text-primary-container font-black tracking-tighter md:text-headline-lg">SARANET</h1>
+</div>
+<nav class="flex gap-8 items-center">
+<a class="font-label-bold text-label-bold text-on-surface dark:text-[#f1f1f1] hover:text-primary-container transition-colors" href="#beneficios">Benefícios</a>
+<a class="font-label-bold text-label-bold text-on-surface dark:text-[#f1f1f1] hover:text-primary-container transition-colors" href="#planos">Planos</a>
+<a class="font-label-bold text-label-bold text-on-surface dark:text-[#f1f1f1] hover:text-primary-container transition-colors" href="#faq">Dúvidas</a>
+</nav>
+<div class="flex items-center gap-3">
+
+        <button id="language-toggle">
+            🇧🇷
+        </button>
+
+    </div>
+<div class="flex items-center gap-4">
+<button aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors flex items-center justify-center" id="theme-toggle">
+<span class="material-symbols-outlined text-on-surface" id="theme-icon-light">light_mode</span>
+<span class="material-symbols-outlined text-[#f1f1f1] hidden" id="theme-icon-dark">dark_mode</span>
+</button>
+<button class="bg-primary-container text-on-primary font-label-bold text-label-bold px-6 py-2 rounded-full active:scale-95 transition-transform">
+        Contact
+    </button>
+</div>
+</header>
+<!-- Section 2: Hero -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden bg-surface dark:bg-[#131313]">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="max-w-3xl">
+<span class="inline-block bg-primary-container/10 text-primary-container font-label-bold text-label-bold px-4 py-1 rounded-full mb-6">ULTRA VELOCIDADE</span>
+<h2 class="font-display-lg-mobile text-display-lg-mobile md:text-display-lg md:font-display-lg mb-6 text-on-background dark:text-[#f1f1f1]">Internet rápida para quem não quer perder tempo.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant dark:text-gray-400 mb-10 max-w-xl">Conecte sua casa ou empresa com uma internet estável, rápida e suporte local sempre que precisar.</p>
+<div class="flex flex-col md:flex-row gap-4">
+<button class="bg-primary-container text-white font-bold px-10 py-4 rounded-xl flex items-center justify-center gap-2 glow-orange hover:brightness-110 transition-all w-full md:w-auto">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>Contratar Agora
+                </button>
+<button class="border border-on-background dark:border-[#f1f1f1] text-on-background dark:text-[#f1f1f1] font-bold px-10 py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-all w-full md:w-auto">
+<span class="material-symbols-outlined">chat</span>Falar no WhatsApp
+                </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Benefícios (Bento Grid) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="beneficios">
+<div class="text-center mb-16">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile md:text-headline-lg mb-4 text-primary-container">Por que escolher a SaraNet?</h3>
+<p class="text-on-surface-variant dark:text-gray-400 font-body-md text-body-md max-w-2xl mx-auto">Tecnologia de ponta para garantir que você nunca fique offline quando mais precisa.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="glass-card p-8 rounded-3xl md:col-span-2">
+<span class="material-symbols-outlined text-primary-container text-5xl mb-6">settings_input_svideo</span>
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile mb-2 text-on-surface dark:text-[#f1f1f1]">Fibra Óptica Real</h4>
+<p class="text-on-surface-variant dark:text-gray-400 font-body-md">Infraestrutura 100% em fibra de ponta a ponta, garantindo a maior velocidade de download e upload do mercado.</p>
+</div>
+<div class="glass-card p-8 rounded-3xl">
+<span class="material-symbols-outlined text-primary-container text-5xl mb-6">videogame_asset</span>
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile mb-2 text-on-surface dark:text-[#f1f1f1]">Ultra Baixa Latência</h4>
+<p class="text-on-surface-variant dark:text-gray-400 font-body-md">O ping dos sonhos para gamers profissionais e streamers.</p>
+</div>
+<div class="glass-card p-8 rounded-3xl">
+<span class="material-symbols-outlined text-primary-container text-5xl mb-6">high_quality</span>
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile mb-2 text-on-surface dark:text-[#f1f1f1]">Streaming 4K</h4>
+<p class="text-on-surface-variant dark:text-gray-400 font-body-md">Assista seus filmes e séries favoritos sem interrupções ou carregamentos.</p>
+</div>
+<div class="glass-card p-8 rounded-3xl md:col-span-2">
+<span class="material-symbols-outlined text-primary-container text-5xl mb-6">support_agent</span>
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile mb-2 text-on-surface dark:text-[#f1f1f1]">Atendimento Regional</h4>
+<p class="text-on-surface-variant dark:text-gray-400 font-body-md">Não somos um robô. Nosso suporte é humanizado, local e focado na sua satisfação imediata.</p>
+</div>
+</div>
+</section>
+<!-- Section 4: Sobre -->
+<section class="py-section-gap relative bg-surface-container-low dark:bg-[#1c1b1b]">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative h-[500px] rounded-3xl overflow-hidden group shadow-lg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic, high-contrast photograph of a technician working with glowing orange fiber optic cables." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwyJq3TEMWTDKuQlfkBGH-BRT4rSoPfyvfPvGsKH97HlkcDxLqDvCJAGJlzOxgOxzj-vLywtIMHLlnnkOrjw8QMhU-dRH5ggCTHeYnfeue6qvCcnthMrcqsfmXqIebs9YBt755rSGl9CXcUeQhMg9F8k3TSh3bcKrfSXr-61cj-iJ6BhAnc439Czg-eQev52GzVm7MW5VUdCV2yWQsHNSJDFEOGVj_11alKJ5vVpz1FR1EEsUdw0zkIRe9qPPPuCSxs7nOKKbypCY')"></div>
+</div>
+<div>
+<h3 class="font-headline-lg-mobile text-display-lg-mobile md:text-headline-lg mb-6 text-on-background dark:text-[#f1f1f1]">Conectando você ao que realmente importa.</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant dark:text-gray-400 mb-8">Na SaraNet, acreditamos que a internet não é apenas um serviço, é uma ponte para oportunidades. Seja para o trabalho remoto, educação à distância ou lazer em família, nossa missão é entregar estabilidade absoluta.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<span class="font-bold text-lg text-on-surface dark:text-[#f1f1f1]">Compromisso com a Estabilidade</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">speed</span>
+</div>
+<span class="font-bold text-lg text-on-surface dark:text-[#f1f1f1]">Velocidade que não oscila</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!--Section Planos-->
+<div class="cards" id="planos">
+
+    <div class="card-planos">
+
+        <div class="topo">
+
+            <p>PARA ÁREA URBANA</p>
+
+            <h2>800</h2>
+
+            <span class="mega">MEGA</span>
+
+            <small>Fibra Óptica</small>
+
+        </div>
+
+        <div class="infos">
+
+            <div class="hidden">
+
+                <div class="height">
+
+                    <h4>IDEAL PARA</h4>
+
+                    <p>✔ Assistir Lives</p>
+                    <p>✔ Games Online</p>
+                    <p>✔ Maratona de Séries</p>
+
+                </div>
+
+            </div>
+
+            <div class="preco">
+
+                <small>por apenas</small>
+
+                <h3>R$129<span>,90</span></h3>
+
+            </div>
+
+            <div class="desc">
+
+                Sem limite de franquia
+
+            </div>
+
+            <div class="botao">
+
+                <a href="#">PEDIR AGORA</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card-planos">
+
+        <div class="topo">
+
+            <p>PARA ÁREA URBANA</p>
+
+            <h2>800</h2>
+
+            <span class="mega">MEGA</span>
+
+            <small>Fibra Óptica</small>
+
+        </div>
+
+        <div class="infos">
+
+            <div class="hidden">
+
+                <div class="height">
+
+                    <h4>IDEAL PARA</h4>
+
+                    <p>✔ Assistir Lives</p>
+                    <p>✔ Games Online</p>
+                    <p>✔ Maratona de Séries</p>
+
+                </div>
+
+            </div>
+
+            <div class="preco">
+
+                <small>por apenas</small>
+
+                <h3>R$129<span>,90</span></h3>
+
+            </div>
+
+            <div class="desc">
+
+                Sem limite de franquia
+
+            </div>
+
+            <div class="botao">
+
+                <a href="#">PEDIR AGORA</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card-planos">
+
+        <div class="topo">
+
+            <p>PARA ÁREA URBANA</p>
+
+            <h2>800</h2>
+
+            <span class="mega">MEGA</span>
+
+            <small>Fibra Óptica</small>
+
+        </div>
+
+        <div class="infos">
+
+            <div class="hidden">
+
+                <div class="height">
+
+                    <h4>IDEAL PARA</h4>
+
+                    <p>✔ Assistir Lives</p>
+                    <p>✔ Games Online</p>
+                    <p>✔ Maratona de Séries</p>
+
+                </div>
+
+            </div>
+
+            <div class="preco">
+
+                <small>por apenas</small>
+
+                <h3>R$129<span>,90</span></h3>
+
+            </div>
+
+            <div class="desc">
+
+                Sem limite de franquia
+
+            </div>
+
+            <div class="botao">
+
+                <a href="#">PEDIR AGORA</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- Section 5: Para quem é -->
+<section class="py-section-gap bg-surface-container-lowest dark:bg-[#0e0e0e]">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile md:text-headline-lg text-on-background dark:text-[#f1f1f1]">Soluções para cada necessidade</h3>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8">
+<div class="flex flex-col items-center gap-4 p-6 glass-card rounded-2xl text-center">
+<span class="material-symbols-outlined text-4xl text-primary-container">home</span>
+<span class="font-label-bold text-label-bold text-on-surface dark:text-[#f1f1f1]">Residências</span>
+</div>
+<div class="flex flex-col items-center gap-4 p-6 glass-card rounded-2xl text-center">
+<span class="material-symbols-outlined text-4xl text-primary-container">business</span>
+<span class="font-label-bold text-label-bold text-on-surface dark:text-[#f1f1f1]">Empresas</span>
+</div>
+<div class="flex flex-col items-center gap-4 p-6 glass-card rounded-2xl text-center">
+<span class="material-symbols-outlined text-4xl text-primary-container">sports_esports</span>
+<span class="font-label-bold text-label-bold text-on-surface dark:text-[#f1f1f1]">Gamers</span>
+</div>
+<div class="flex flex-col items-center gap-4 p-6 glass-card rounded-2xl text-center">
+<span class="material-symbols-outlined text-4xl text-primary-container">school</span>
+<span class="font-label-bold text-label-bold text-on-surface dark:text-[#f1f1f1]">Estudantes</span>
+</div>
+<div class="flex flex-col items-center gap-4 p-6 glass-card rounded-2xl text-center">
+<span class="material-symbols-outlined text-4xl text-primary-container">laptop_mac</span>
+<span class="font-label-bold text-label-bold text-on-surface dark:text-[#f1f1f1]">Home Office</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Diferenciais -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background dark:bg-[#131313]">
+<div class="max-w-3xl mx-auto glass-card p-12 rounded-[40px] relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 blur-[100px] rounded-full"></div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile mb-10 text-on-background dark:text-[#f1f1f1]">Muito mais que internet.</h3>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container mt-1">check_circle</span>
+<div>
+<p class="font-bold text-xl text-on-surface dark:text-[#f1f1f1]">Instalação em até 48 horas</p>
+<p class="text-on-surface-variant dark:text-gray-400">Rapidez no processo para você não ficar offline.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container mt-1">check_circle</span>
+<div>
+<p class="font-bold text-xl text-on-surface dark:text-[#f1f1f1]">Wi-Fi de Alta Performance</p>
+<p class="text-on-surface-variant dark:text-gray-400">Equipamentos de última geração inclusos no plano.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container mt-1">check_circle</span>
+<div>
+<p class="font-bold text-xl text-on-surface dark:text-[#f1f1f1]">Sem pegadinhas</p>
+<p class="text-on-surface-variant dark:text-gray-400">Preços fixos e transparência total no seu contrato.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<!-- Section 7: Processo -->
+<section class="py-section-gap bg-surface-container-high dark:bg-[#252525]">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-center mb-20 text-on-background dark:text-[#f1f1f1]">Como assinar?</h3>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
+<div class="flex flex-col items-center text-center relative z-10 group">
+<div class="w-20 h-20 rounded-full bg-primary-container text-white flex items-center justify-center font-black text-2xl mb-6 shadow-md step-line transition-transform group-hover:scale-110">1</div>
+<h5 class="font-bold text-xl mb-2 text-on-background dark:text-[#f1f1f1]">Solicite</h5>
+<p class="text-on-surface-variant dark:text-gray-400">Entre em contato via WhatsApp ou Site.</p>
+</div>
+<div class="flex flex-col items-center text-center relative z-10 group">
+<div class="w-20 h-20 rounded-full bg-white dark:bg-[#131313] text-on-background dark:text-[#f1f1f1] flex items-center justify-center font-black text-2xl mb-6 border border-black/10 dark:border-white/10 shadow-sm step-line transition-transform group-hover:scale-110">2</div>
+<h5 class="font-bold text-xl mb-2 text-on-background dark:text-[#f1f1f1]">Cobertura</h5>
+<p class="text-on-surface-variant dark:text-gray-400">Consultamos a viabilidade técnica.</p>
+</div>
+<div class="flex flex-col items-center text-center relative z-10 group">
+<div class="w-20 h-20 rounded-full bg-white dark:bg-[#131313] text-on-background dark:text-[#f1f1f1] flex items-center justify-center font-black text-2xl mb-6 border border-black/10 dark:border-white/10 shadow-sm step-line transition-transform group-hover:scale-110">3</div>
+<h5 class="font-bold text-xl mb-2 text-on-background dark:text-[#f1f1f1]">Instalação</h5>
+<p class="text-on-surface-variant dark:text-gray-400">Nossa equipe técnica vai até você.</p>
+</div>
+<div class="flex flex-col items-center text-center relative z-10 group">
+<div class="w-20 h-20 rounded-full bg-white dark:bg-[#131313] text-on-background dark:text-[#f1f1f1] flex items-center justify-center font-black text-2xl mb-6 border border-black/10 dark:border-white/10 shadow-sm transition-transform group-hover:scale-110">4</div>
+<h5 class="font-bold text-xl mb-2 text-on-background dark:text-[#f1f1f1]">Navegue</h5>
+<p class="text-on-surface-variant dark:text-gray-400">Pronto! Internet ultra veloz liberada.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 8: CTA Final -->
+<section class="py-section-gap bg-background dark:bg-[#131313]">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-gradient-to-r from-primary-container to-[#ff9933] p-12 md:p-20 rounded-[40px] text-center text-white">
+<h3 class="font-display-lg-mobile text-display-lg-mobile mb-6 font-black">Sua nova internet está a um clique.</h3>
+<p class="font-body-lg text-body-lg mb-10 opacity-90 max-w-2xl mx-auto">Não aceite menos que a perfeição na sua conexão. Junte-se aos milhares de clientes satisfeitos da SaraNet.</p>
+<button class="bg-on-background text-white px-12 py-5 rounded-2xl font-black text-xl hover:scale-105 active:scale-95 transition-all shadow-2xl">
+                📲 Quero contratar
+            </button>
+</div>
+</div>
+</section>
+<!-- Section 9: FAQ -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface dark:bg-[#131313]" id="faq">
+<div class="max-w-3xl mx-auto">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-center mb-12 text-on-background dark:text-[#f1f1f1]">Perguntas Frequentes</h3>
+<div class="space-y-4">
+<details class="glass-card rounded-2xl overflow-hidden group">
+<summary class="p-6 cursor-pointer list-none flex justify-between items-center text-on-surface dark:text-[#f1f1f1]">
+<span class="font-bold text-lg">Qual o prazo de instalação?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant dark:text-gray-400">
+                    Nosso compromisso é realizar a instalação em até 48 horas úteis após a confirmação da viabilidade.
+                </div>
+</details>
+<details class="glass-card rounded-2xl overflow-hidden group">
+<summary class="p-6 cursor-pointer list-none flex justify-between items-center text-on-surface dark:text-[#f1f1f1]">
+<span class="font-bold text-lg">Existe limite de dados (franquia)?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant dark:text-gray-400">
+                    Não! Todos os nossos planos de fibra óptica possuem dados ilimitados para você navegar o quanto quiser.
+                </div>
+</details>
+<details class="glass-card rounded-2xl overflow-hidden group">
+<summary class="p-6 cursor-pointer list-none flex justify-between items-center text-on-surface dark:text-[#f1f1f1]">
+<span class="font-bold text-lg">Vocês oferecem planos para empresas?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant dark:text-gray-400">
+                    Sim! Temos planos dedicados com IP fixo e suporte prioritário para garantir que sua empresa nunca pare.
+                </div>
+</details>
+</div>
+</div>
+</section>
+<!-- Section 10: Footer -->
+<footer class="bg-surface-container-lowest dark:bg-[#0e0e0e] py-section-gap px-margin-mobile text-center border-t border-black/5 dark:border-white/5">
+<div class="max-w-container-max mx-auto flex flex-col gap-base items-center">
+<h4 class="font-headline-lg text-primary-container mb-4 font-black">SARANET</h4>
+<div class="flex flex-wrap justify-center gap-6 mb-8">
+<a class="font-body-md text-on-surface-variant dark:text-gray-400 hover:text-primary-container transition-all" href="#">Support</a>
+<a class="font-body-md text-on-surface-variant dark:text-gray-400 hover:text-primary-container transition-all" href="#">Privacy Policy</a>
+<a class="font-body-md text-on-surface-variant dark:text-gray-400 hover:text-primary-container transition-all" href="#">Terms of Service</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-gray-400 opacity-60">© 2026 SaraNet Telecom. Todos Direitos Reservados.</p>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-gray-400 opacity-60">Desenvolvido por <a class="roxo" href="https://www.zyntekconnect.com.br" target="_blank">Zyntek</a></p>
+</div>
+</footer>
+<!-- Bottom Nav for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 pb-2 bg-surface/90 dark:bg-[#131313]/90 backdrop-blur-2xl border-t border-black/5 dark:border-white/5 shadow-lg rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-gray-400 hover:text-primary-container transition-all" href="#planos">
+<span class="material-symbols-outlined">speed</span>
+<span class="font-label-bold text-[10px]">Plans</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-gray-400 hover:text-primary-container transition-all" href="#suporte">
+<span class="material-symbols-outlined">support_agent</span>
+<span class="font-label-bold text-[10px]">Support</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-gray-400 hover:text-primary-container transition-all" href="#conta">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-bold text-[10px]">Dúvidas</span>
+</a>
+<button class="flex flex-col items-center justify-center text-on-secondary-container dark:text-gray-400 hover:text-primary-container transition-all">
+<span class="material-symbols-outlined">menu</span>
+<span class="font-label-bold text-[10px]">Menu</span>
+</button>
+</nav>
+<script>
+        // Theme Toggle Logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIconLight = document.getElementById('theme-icon-light');
+        const themeIconDark = document.getElementById('theme-icon-dark');
+        const html = document.documentElement;
+
+        function updateThemeIcons(isDark) {
+            if (isDark) {
+                themeIconLight.classList.add('hidden');
+                themeIconDark.classList.remove('hidden');
+            } else {
+                themeIconLight.classList.remove('hidden');
+                themeIconDark.classList.add('hidden');
+            }
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const isDark = html.classList.contains('dark');
+            if (isDark) {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                localStorage.setItem('theme', 'light');
+                updateThemeIcons(false);
+            } else {
+                html.classList.remove('light');
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                updateThemeIcons(true);
+            }
+        });
+
+        // Initialize theme from storage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+            html.classList.remove('light');
+            updateThemeIcons(true);
+        } else {
+            html.classList.add('light');
+            html.classList.remove('dark');
+            updateThemeIcons(false);
+        }
+
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Simple observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+
+document.querySelectorAll(".card-planos").forEach(card=>{
+
+    const hidden=card.querySelector(".hidden");
+    const content=card.querySelector(".height");
+
+    card.addEventListener("mouseenter",()=>{
+
+        hidden.style.height=content.scrollHeight+"px";
+
+        card.classList.add("active");
+
+    });
+
+    card.addEventListener("mouseleave",()=>{
+
+        hidden.style.height="0px";
+
+        card.classList.remove("active");
+
+    });
+
+});
+
+const buttons = document.querySelectorAll(".lang-btn");
+
+buttons.forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        buttons.forEach(btn=>btn.classList.remove("active"));
+
+        button.classList.add("active");
+
+        const lang = button.dataset.lang;
+
+        changeLanguage(lang);
+
+    });
+
+});
+
+
+    </script>
+</body></html>
