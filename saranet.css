@@ -19,6 +19,65 @@
 
 }
 
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+  color: #ffffff;
+  text-align: center;
+  font-family: Arial, sans-serif; 
+}
+
+.hero-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); 
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 800px; 
+  padding: 20px;
+  margin-top: 80px;
+ 
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #007BFF; 
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3; 
+}
+
 html{
     scroll-behavior:smooth;
 }
@@ -40,29 +99,31 @@ body{
     gap:30px;          /* Espaço entre os cards */
     flex-wrap:wrap;    /* Quebra linha no celular */
     padding:50px ;
+    background:linear-gradient(135deg, #000000, #352400, #000000);
+
 }
 
 .card-planos{
 
-    width:340px;
-
-    margin: 15px;
-
-    background:#fff;
-
+     width:320px;
+    height:320px;              /* mostra somente o topo */
+    background:linear-gradient(135deg, #fccb08, #dd9701, #e08700);
     border-radius:20px;
-
     overflow:hidden;
-
+    transition:all .5s ease;
     cursor:pointer;
+    margin-top:20px;
+    padding:50px;
+    margin-bottom:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+    border:1px solid black;
 
-    transition:
-    transform .45s cubic-bezier(.22,1,.36,1),
-    box-shadow .45s;
+}
 
-    box-shadow:
-    0 15px 35px rgba(0,0,0,.12);
-
+.card-planos:hover{
+    height:600px;              /* aumenta para baixo */
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(255,193,7,.25);
 }
 
 .card-planos.active{
@@ -78,13 +139,11 @@ body{
 
 .topo{
 
-    background:#FFD200;
-
-    color:#111;
-
-    text-align:center;
-
-    padding:40px 20px;
+    height:220px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 
 }
 
@@ -122,18 +181,31 @@ body{
 
 }
 
+.info-card{
+
+    text-align:center;
+
+    margin-top:20px;
+
+
+}
+
 /*========================*/
 
 .infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    opacity:0;
+    transform:translateY(30px);
+    transition:all .4s ease;
+    
+}
 
-     padding:30px;
-    background:#ffffff;
-    color:#222;
-
-    transition:
-        background .45s ease,
-        color .45s ease;
-
+.card-planos:hover .infos{
+    opacity:1;
+    transform:translateY(0);
 }
 
 /*========================*/
@@ -146,6 +218,8 @@ body{
 
     transition:
     height .45s cubic-bezier(.22,1,.36,1);
+
+    background-color:#fbb913;
 
 }
 
@@ -193,31 +267,32 @@ body{
 
     transition:.35s;
 
-}
-
-.preco small{
-
-    color:#888;
+    padding:20px;
 
 }
 
 .preco h3{
-
-    font-size:56px;
-
-    margin-top:10px;
-
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    line-height: 1;
 }
 
-.preco span{
+.preco h3 span{
+    font-size: 24px;
+}
 
-    font-size:24px;
-
+.preco small{
+    color: #bfbfbf;
+    font-size: 15px;
+    margin-bottom: 8px;
 }
 
 .card-planos.active .preco{
 
     margin-top:20px;
+    text-align:center;
 
 }
 
@@ -227,7 +302,7 @@ body{
 
     text-align:center;
 
-    margin-top:25px;
+    margin-top:10px;
 
     color:#666;
 
@@ -236,16 +311,13 @@ body{
 /*========================*/
 
 .botao{
-
-    margin-top:30px;
-
-    opacity:0;
-
+    width:200px;
+    
     transform:translateY(35px);
-
     transition:
     opacity .35s,
     transform .35s;
+    
 
 }
 
@@ -260,22 +332,15 @@ body{
 .botao a{
 
     display:block;
-
+    width:100%;
+    padding:15px;
+    background:#FFC107;
+    color:#000;
     text-align:center;
-
-    padding:18px;
-
     border-radius:12px;
-
-    background:#FFD200;
-
-    color:#111;
-
     text-decoration:none;
+    font-weight:700;
 
-    font-weight:bold;
-
-    transition:.3s;
 
 }
 
