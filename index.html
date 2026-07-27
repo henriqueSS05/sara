@@ -8,7 +8,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800;900&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="saranet.css">
-<link rel="icon" href="saranet logo.png" type="image/x-icon">
+<link rel="icon" href="favicon_full.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -166,7 +167,10 @@
 <header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-[#131313]/80 backdrop-blur-xl border-b border-black/5 dark:border-white/5 h-16 flex justify-between items-center px-margin-mobile md:px-margin-desktop">
 <div class="flex items-center gap-2">
 
-<img src="saranet logo.png" id="logo" class="h-8 w-auto" alt="SaraNet Logo"/>
+<img
+    id="logo"
+    src="saranet logo.png"
+    alt="SaraNet Logo">
 </div>
 <nav class="flex gap-8 items-center">
 <a class="font-label-bold text-label-bold text-on-surface dark:text-[#f1f1f1] hover:text-primary-container transition-colors" href="#beneficios">Benefícios</a>
@@ -556,25 +560,6 @@
 <p class="font-body-md text-body-md text-on-surface-variant dark:text-gray-400 opacity-60">Desenvolvido por <a class="roxo" href="https://www.zyntekconnect.com.br" target="_blank">Zyntek</a></p>
 </div>
 </footer>
-<!-- Bottom Nav for Mobile -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 pb-2 bg-surface/90 dark:bg-[#131313]/90 backdrop-blur-2xl border-t border-black/5 dark:border-white/5 shadow-lg rounded-t-xl">
-<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-gray-400 hover:text-primary-container transition-all" href="#planos">
-<span class="material-symbols-outlined">speed</span>
-<span class="font-label-bold text-[10px]">Plans</span>
-</a>
-<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-gray-400 hover:text-primary-container transition-all" href="#suporte">
-<span class="material-symbols-outlined">support_agent</span>
-<span class="font-label-bold text-[10px]">Support</span>
-</a>
-<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-gray-400 hover:text-primary-container transition-all" href="#conta">
-<span class="material-symbols-outlined">person</span>
-<span class="font-label-bold text-[10px]">Dúvidas</span>
-</a>
-<button class="flex flex-col items-center justify-center text-on-secondary-container dark:text-gray-400 hover:text-primary-container transition-all">
-<span class="material-symbols-outlined">menu</span>
-<span class="font-label-bold text-[10px]">Menu</span>
-</button>
-</nav>
 <script>
         // Theme Toggle Logic
         const themeToggle = document.getElementById('theme-toggle');
@@ -692,6 +677,38 @@ buttons.forEach(button=>{
 
 });
 
+const logo = document.getElementById("logo");
+
+function atualizarLogo() {
+    if (document.body.classList.contains("dark")) {
+        logo.src = "saranet logo.png";
+    } else {
+        logo.src = "saranetblack.png";
+    }
+}
+
+// Executa ao carregar a página
+atualizarLogo();
+
+// Exemplo do botão de tema
+
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    atualizarLogo();
+});
+
 
     </script>
-</body></html>
+    <div class="social-float">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/5544999999999" target="_blank" class="whatsapp" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://instagram.com/seuusuario" target="_blank" class="instagram" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
+</body>
+</html>
