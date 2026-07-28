@@ -178,6 +178,18 @@
 <a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="#planos">Planos</a>
 <a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="#faq">Dúvidas</a>
 <a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="https://www.speedtest.net/pt" target="_blank">Teste de Velocidade</a>
+<button class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<div class="menu-mobile" id="menuMobile">
+    <a href="#inicio">Início</a>
+    <a href="#beneficios">Benefícios</a>
+    <a href="#planos">Planos</a>
+    <a href="#contato">Contato</a>
+</div>
 </nav>
 <div class="flex items-center gap-4">
 <button aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors flex items-center justify-center" id="theme-toggle">
@@ -808,6 +820,17 @@ window.addEventListener("scroll", () => {
     lastScroll = currentScroll;
 });
 
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("menuMobile");
+
+
+hamburger.addEventListener("click",()=>{
+
+    hamburger.classList.toggle("active");
+    menu.classList.toggle("active");
+
+});
+
 
  </script>
 
@@ -876,6 +899,7 @@ window.addEventListener("scroll", () => {
     </div>
 
 </div>
+
 
 </body>
 </html>
