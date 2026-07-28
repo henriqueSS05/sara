@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="saranet.css">
 <link rel="icon" href="favicon_full.ico" type="image/x-icon">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -164,27 +165,26 @@
 </head>
 <body class="bg-background dark:bg-[#131313] text-on-background dark:text-[#f1f1f1]">
 <!-- Section 1: Header (TopAppBar) -->
-<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-[#131313]/80 backdrop-blur-xl border-b border-black/5 dark:border-white/5 h-16 flex justify-between items-center px-margin-mobile md:px-margin-desktop">
+<header id="navbar" class=" navbar-glow fixed top-0 w-full z-50 bg-surface/20 dark:bg-[#131313]/50 backdrop-blur-1  border-black/5 dark:border-white/5 h-16 flex justify-between items-center  md:px-margin-desktop">
 <div class="flex items-center gap-2">
 
 <img
     id="logo"
-    src="saranet logo.png"
+    src="saranetnova.png"
     alt="SaraNet Logo">
 </div>
 <nav class="flex gap-8 items-center">
-<a class="font-label-bold text-label-bold text-on-surface dark:text-[#f1f1f1] hover:text-primary-container transition-colors" href="#beneficios">Benefícios</a>
-<a class="font-label-bold text-label-bold text-on-surface dark:text-[#f1f1f1] hover:text-primary-container transition-colors" href="#planos">Planos</a>
-<a class="font-label-bold text-label-bold text-on-surface dark:text-[#f1f1f1] hover:text-primary-container transition-colors" href="#faq">Dúvidas</a>
+<a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="#beneficios">Benefícios</a>
+<a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="#planos">Planos</a>
+<a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="#faq">Dúvidas</a>
+<a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="https://www.speedtest.net/pt" target="_blank">Teste de Velocidade</a>
 </nav>
 <div class="flex items-center gap-4">
 <button aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors flex items-center justify-center" id="theme-toggle">
-<span class="material-symbols-outlined text-on-surface" id="theme-icon-light">light_mode</span>
+<span class="material-symbols-outlined text-[#fbb913]" id="theme-icon-light">light_mode</span>
 <span class="material-symbols-outlined text-[#f1f1f1] hidden" id="theme-icon-dark">dark_mode</span>
 </button>
-<button class="bg-primary-container text-on-primary font-label-bold text-label-bold px-6 py-2 rounded-full active:scale-95 transition-transform">
-        Contact
-    </button>
+
 </div>
 </header>
 <!-- Section 2: Hero -->
@@ -193,17 +193,15 @@
         <img class="hero-bg-img" src="fundo.gif" alt="Fundo animado">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-                   <div class="max-w-3xl">
-        <span class="inline-block bg-primary-container/10 text-primary-container font-label-bold text-label-bold px-4 py-1 rounded-full mb-6">ULTRA VELOCIDADE</span>
-        <h2 class="font-display-lg-mobile text-display-lg-mobile md:text-display-lg md:font-display-lg mb-6 text-on-background dark:text-[#f1f1f1]">Internet rápida para quem não quer perder tempo.</h2>
-        <p class="font-body-lg text-body-lg text-on-surface-variant dark:text-gray-400 mb-10 max-w-xl">Conecte sua casa ou empresa com uma internet estável, rápida e suporte local sempre que precisar.</p>
-            <div class="flex flex-col md:flex-row gap-4">
-            <button class="bg-primary-container text-white font-bold px-10 py-4 rounded-xl flex items-center justify-center gap-2 glow-orange hover:brightness-110 transition-all w-full md:w-auto">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>Contratar Agora
-                            </button>
-            <button class="border border-on-background dark:border-[#f1f1f1] text-on-background dark:text-[#f1f1f1] font-bold px-10 py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-black/5 dark:hover:bg-white/5 transition-all w-full md:w-auto">
-            <span class="material-symbols-outlined">chat</span>Falar no WhatsApp
-                            </button>
+            <div class="max-w-3xl">
+                <span class="inline-block bg-primary-container/10 text-primary-container font-label-bold text-label-bold px-4 py-1 rounded-full mb-6">ULTRA VELOCIDADE</span>
+                <h2 class="font-display-lg-mobile text-display-lg-mobile md:text-display-lg md:font-display-lg mb-6 text-on-background text-white">Internet rápida para quem não quer perder tempo.</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant text-white mb-10 max-w-xl">Conecte sua casa ou empresa com uma internet estável, rápida e suporte local sempre que precisar.</p>
+                <div class="flex flex-col md:flex-row gap-4">
+                    <button class="bg-white text-[#fbb913] font-bold px-10 py-4 rounded-xl flex items-center justify-center gap-2  hover:brightness-110 transition-all w-full md:w-auto">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>Contratar Agora
+                                </button>
+                </div>
             </div>
         </div>
     </div>
@@ -474,31 +472,84 @@
 </section>
 <!-- Section 7: Processo -->
 <section class="py-section-gap bg-surface-container-high dark:bg-[#252525]">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-center mb-20 text-on-background dark:text-[#f1f1f1]">Como assinar?</h3>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
-<div class="flex flex-col items-center text-center relative z-10 group">
-<div class="w-20 h-20 rounded-full bg-primary-container text-white flex items-center justify-center font-black text-2xl mb-6 shadow-md step-line transition-transform group-hover:scale-110">1</div>
-<h5 class="font-bold text-xl mb-2 text-on-background dark:text-[#f1f1f1]">Solicite</h5>
-<p class="text-on-surface-variant dark:text-gray-400">Entre em contato via WhatsApp ou Site.</p>
-</div>
-<div class="flex flex-col items-center text-center relative z-10 group">
-<div class="w-20 h-20 rounded-full bg-white dark:bg-[#131313] text-on-background dark:text-[#f1f1f1] flex items-center justify-center font-black text-2xl mb-6 border border-black/10 dark:border-white/10 shadow-sm step-line transition-transform group-hover:scale-110">2</div>
-<h5 class="font-bold text-xl mb-2 text-on-background dark:text-[#f1f1f1]">Cobertura</h5>
-<p class="text-on-surface-variant dark:text-gray-400">Consultamos a viabilidade técnica.</p>
-</div>
-<div class="flex flex-col items-center text-center relative z-10 group">
-<div class="w-20 h-20 rounded-full bg-white dark:bg-[#131313] text-on-background dark:text-[#f1f1f1] flex items-center justify-center font-black text-2xl mb-6 border border-black/10 dark:border-white/10 shadow-sm step-line transition-transform group-hover:scale-110">3</div>
-<h5 class="font-bold text-xl mb-2 text-on-background dark:text-[#f1f1f1]">Instalação</h5>
-<p class="text-on-surface-variant dark:text-gray-400">Nossa equipe técnica vai até você.</p>
-</div>
-<div class="flex flex-col items-center text-center relative z-10 group">
-<div class="w-20 h-20 rounded-full bg-white dark:bg-[#131313] text-on-background dark:text-[#f1f1f1] flex items-center justify-center font-black text-2xl mb-6 border border-black/10 dark:border-white/10 shadow-sm transition-transform group-hover:scale-110">4</div>
-<h5 class="font-bold text-xl mb-2 text-on-background dark:text-[#f1f1f1]">Navegue</h5>
-<p class="text-on-surface-variant dark:text-gray-400">Pronto! Internet ultra veloz liberada.</p>
-</div>
-</div>
-</div>
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+
+        <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-center text-on-background dark:text-white mb-4">
+            Como assinar?
+        </h3>
+
+        <p class="text-center text-on-surface-variant dark:text-gray-400 max-w-2xl mx-auto mb-16">
+            Contratar a SaraNet é rápido e fácil. Em poucos passos você já estará conectado.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+
+            <!-- Linha -->
+            <div class="hidden md:block absolute top-10 left-[12%] right-[12%] h-1 bg-yellow-400/30 rounded-full"></div>
+
+            <!-- Passo 1 -->
+            <div class="relative z-10 group text-center">
+                <div class="mx-auto w-20 h-20 rounded-full bg-yellow-400 text-[#131313] flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+                    <span class="material-symbols-outlined text-4xl">chat</span>
+                </div>
+
+                <h4 class="mt-6 text-xl font-bold text-on-background dark:text-white">
+                    Solicite
+                </h4>
+
+                <p class="mt-2 text-on-surface-variant dark:text-gray-400">
+                    Entre em contato pelo WhatsApp ou pelo nosso site.
+                </p>
+            </div>
+
+            <!-- Passo 2 -->
+            <div class="relative z-10 group text-center">
+                <div class="mx-auto w-20 h-20 rounded-full bg-yellow-400 text-[#131313] flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+                    <span class="material-symbols-outlined text-4xl">wifi_find</span>
+                </div>
+
+                <h4 class="mt-6 text-xl font-bold text-on-background dark:text-white">
+                    Cobertura
+                </h4>
+
+                <p class="mt-2 text-on-surface-variant dark:text-gray-400">
+                    Verificamos a disponibilidade e a viabilidade técnica.
+                </p>
+            </div>
+
+            <!-- Passo 3 -->
+            <div class="relative z-10 group text-center">
+                <div class="mx-auto w-20 h-20 rounded-full bg-yellow-400 text-[#131313] flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+                    <span class="material-symbols-outlined text-4xl">construction</span>
+                </div>
+
+                <h4 class="mt-6 text-xl font-bold text-on-background dark:text-white">
+                    Instalação
+                </h4>
+
+                <p class="mt-2 text-on-surface-variant dark:text-gray-400">
+                    Nossa equipe realiza a instalação com rapidez e segurança.
+                </p>
+            </div>
+
+            <!-- Passo 4 -->
+            <div class="relative z-10 group text-center">
+                <div class="mx-auto w-20 h-20 rounded-full bg-yellow-400 text-[#131313] flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+                    <span class="material-symbols-outlined text-4xl">rocket_launch</span>
+                </div>
+
+                <h4 class="mt-6 text-xl font-bold text-on-background dark:text-white">
+                    Aproveite
+                </h4>
+
+                <p class="mt-2 text-on-surface-variant dark:text-gray-400">
+                    Sua internet é ativada e você já pode navegar em alta velocidade.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
 </section>
 <!-- Section 8: CTA Final -->
 <section class="py-section-gap bg-background dark:bg-[#131313]">
@@ -507,45 +558,81 @@
 <h3 class="font-display-lg-mobile text-display-lg-mobile mb-6 font-black">Sua nova internet está a um clique.</h3>
 <p class="font-body-lg text-body-lg mb-10 opacity-90 max-w-2xl mx-auto">Não aceite menos que a perfeição na sua conexão. Junte-se aos milhares de clientes satisfeitos da SaraNet.</p>
 <button class="bg-on-background text-white px-12 py-5 rounded-2xl font-black text-xl hover:scale-105 active:scale-95 transition-all shadow-2xl">
-                📲 Quero contratar
+                Quero contratar
             </button>
 </div>
 </div>
 </section>
 <!-- Section 9: FAQ -->
 <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface dark:bg-[#131313]" id="faq">
-<div class="max-w-3xl mx-auto">
-<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-center mb-12 text-on-background dark:text-[#f1f1f1]">Perguntas Frequentes</h3>
-<div class="space-y-4">
-<details class="glass-card rounded-2xl overflow-hidden group">
-<summary class="p-6 cursor-pointer list-none flex justify-between items-center text-on-surface dark:text-[#f1f1f1]">
-<span class="font-bold text-lg">Qual o prazo de instalação?</span>
-<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-on-surface-variant dark:text-gray-400">
-                    Nosso compromisso é realizar a instalação em até 48 horas úteis após a confirmação da viabilidade.
+    <div class="max-w-3xl mx-auto">
+
+        <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-center mb-4 text-on-background dark:text-white">
+            Perguntas Frequentes
+        </h3>
+
+        <p class="text-center text-on-surface-variant dark:text-gray-400 mb-12">
+            Tire suas dúvidas sobre nossos planos e instalação.
+        </p>
+
+        <div class="space-y-5">
+
+            <details class="glass-card rounded-2xl group">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <span class="font-bold text-lg text-on-background dark:text-white">
+                        Qual o prazo de instalação?
+                    </span>
+
+                    <span class="material-symbols-outlined transition-all duration-300 group-open:rotate-180 group-open:text-[#fbb913]">
+                        expand_more
+                    </span>
+                </summary>
+
+                <div class="faq-content">
+                    <p class="px-6 pb-6 text-on-surface-variant dark:text-gray-400">
+                        Nosso compromisso é realizar a instalação em até 48 horas úteis após a confirmação da viabilidade.
+                    </p>
                 </div>
-</details>
-<details class="glass-card rounded-2xl overflow-hidden group">
-<summary class="p-6 cursor-pointer list-none flex justify-between items-center text-on-surface dark:text-[#f1f1f1]">
-<span class="font-bold text-lg">Existe limite de dados (franquia)?</span>
-<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-on-surface-variant dark:text-gray-400">
-                    Não! Todos os nossos planos de fibra óptica possuem dados ilimitados para você navegar o quanto quiser.
+            </details>
+
+            <details class="glass-card rounded-2xl group">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <span class="font-bold text-lg text-on-background dark:text-white">
+                        Existe limite de dados (franquia)?
+                    </span>
+
+                    <span class="material-symbols-outlined transition-all duration-300 group-open:rotate-180 group-open:text-[#fbb913]">
+                        expand_more
+                    </span>
+                </summary>
+
+                <div class="faq-content">
+                    <p class="px-6 pb-6 text-on-surface-variant dark:text-gray-400">
+                        Não! Todos os nossos planos possuem internet ilimitada.
+                    </p>
                 </div>
-</details>
-<details class="glass-card rounded-2xl overflow-hidden group">
-<summary class="p-6 cursor-pointer list-none flex justify-between items-center text-on-surface dark:text-[#f1f1f1]">
-<span class="font-bold text-lg">Vocês oferecem planos para empresas?</span>
-<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-on-surface-variant dark:text-gray-400">
-                    Sim! Temos planos dedicados com IP fixo e suporte prioritário para garantir que sua empresa nunca pare.
+            </details>
+
+            <details class="glass-card rounded-2xl group">
+                <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <span class="font-bold text-lg text-on-background dark:text-white">
+                        Vocês oferecem planos para empresas?
+                    </span>
+
+                    <span class="material-symbols-outlined transition-all duration-300 group-open:rotate-180 group-open:text-[#fbb913]">
+                        expand_more
+                    </span>
+                </summary>
+
+                <div class="faq-content">
+                    <p class="px-6 pb-6 text-on-surface-variant dark:text-gray-400">
+                        Sim! Temos planos empresariais com IP fixo, suporte prioritário e soluções sob medida.
+                    </p>
                 </div>
-</details>
-</div>
-</div>
+            </details>
+
+        </div>
+    </div>
 </section>
 <!-- Section 10: Footer -->
 <footer class="bg-surface-container-lowest dark:bg-[#0e0e0e] py-section-gap px-margin-mobile text-center border-t border-black/5 dark:border-white/5">
@@ -681,9 +768,9 @@ const logo = document.getElementById("logo");
 
 function atualizarLogo() {
     if (document.body.classList.contains("dark")) {
-        logo.src = "saranet logo.png";
+        logo.src = "saranetnova.png";
     } else {
-        logo.src = "saranetblack.png";
+        logo.src = "saranetnova2.png";
     }
 }
 
@@ -697,18 +784,98 @@ themeToggle.addEventListener("click", () => {
     atualizarLogo();
 });
 
+let lastScroll = 0;
+const navbar = document.getElementById("navbar");
 
-    </script>
-    <div class="social-float">
-    <!-- WhatsApp -->
-    <a href="https://wa.me/5544999999999" target="_blank" class="whatsapp" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
 
-    <!-- Instagram -->
-    <a href="https://instagram.com/seuusuario" target="_blank" class="instagram" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-    </a>
+    // Sempre mostra a navbar quando estiver no topo
+    if (currentScroll <= 0) {
+        navbar.classList.remove("hide");
+        lastScroll = currentScroll;
+        return;
+    }
+
+    if (currentScroll > lastScroll) {
+        // Descendo
+        navbar.classList.add("hide");
+    } else {
+        // Subindo
+        navbar.classList.remove("hide");
+    }
+
+    lastScroll = currentScroll;
+});
+
+
+ </script>
+
+
+<div class="fab-container">
+
+    <input type="checkbox" id="fab-toggle">
+
+    <div class="fab-options">
+
+        <a href="https://wa.me/5544999999999" target="_blank" class="fab-option whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <a href="https://instagram.com/sarainformatica" target="_blank" class="fab-option instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="#" class="fab-option chatbot">
+            <span class="material-symbols-outlined">smart_toy</span>
+        </a>
+
+    </div>
+
+    <label for="fab-toggle" class="fab-main">
+        <span class="material-symbols-outlined open">chat</span>
+        <span class="material-symbols-outlined close">close</span>
+    </label>
+
 </div>
+
+<div class="chatbot">
+
+    <div class="chat-header">
+        <div>
+            <h4>SaraBot</h4>
+            <small>Online</small>
+        </div>
+
+        <button id="closeChat">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+
+    <div id="chatMessages" class="chat-messages">
+
+        <div class="bot-message">
+            👋 Olá! Seja bem-vindo à SaraNet.
+
+            <br><br>
+
+            Como posso ajudar?
+
+            <br><br>
+
+            <button onclick="sendQuestion('planos')">📶 Planos</button>
+
+            <button onclick="sendQuestion('instalacao')">🛠 Instalação</button>
+
+            <button onclick="sendQuestion('cobertura')">📍 Cobertura</button>
+
+            <button onclick="sendQuestion('financeiro')">💳 Financeiro</button>
+
+        </div>
+
+    </div>
+
+</div>
+
 </body>
 </html>
