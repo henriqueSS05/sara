@@ -117,22 +117,22 @@
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(0, 0, 0, 0.05);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 7px 40px rgba(0, 0, 0, 0.50);
             transition: all 0.3s ease;
         }
         .dark .glass-card {
             background: rgba(30, 30, 30, 0.7);
             border-color: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 7px 40px rgba(0, 0, 0, 0.3);
         }
         .glass-card:hover {
             border-color: #fbb913;
             background: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 7px 40px rgba(0, 0, 0, 0.06);
         }
         .dark .glass-card:hover {
             background: rgba(40, 40, 40, 0.9);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 7px 40px rgba(0, 0, 0, 0.5);
         }
         .glow-orange {
             box-shadow: 0 4px 15px rgba(255, 102, 0, 0.25);
@@ -170,35 +170,50 @@
 
 <img
     id="logo"
+    class="ml-4 h-10 w-auto"
     src="saranetnova.png"
     alt="SaraNet Logo">
 </div>
-<nav class="flex gap-8 items-center">
-<a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="#beneficios">Benefícios</a>
-<a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="#planos">Planos</a>
-<a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="#faq">Dúvidas</a>
-<a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="https://www.speedtest.net/pt" target="_blank">Teste de Velocidade</a>
-<button class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-</button>
 
-<div class="menu-mobile" id="menuMobile">
-    <a href="#inicio">Início</a>
-    <a href="#beneficios">Benefícios</a>
-    <a href="#planos">Planos</a>
-    <a href="#contato">Contato</a>
-</div>
+<nav class="navbar">
+
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+
+
+    <div class="nav-links flex items-center gap-8  " id="navLinks">
+        <div class="menu-header">
+        <button id="closeMenu" class="close-menu">
+                ✕
+            </button>
+        </div>
+        
+        <a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="#beneficios">Benefícios</a>
+
+        <a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="#planos">Planos</a>
+
+        <a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="#faq">Dúvidas</a>
+
+        <a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors"
+           href="https://www.speedtest.net/pt"
+           target="_blank">
+            Teste de Velocidade
+        </a>
+    </div>
+
 </nav>
-<div class="flex items-center gap-4">
+<div class="flex items-center gap-7 tema ml-auto">
 <button aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors flex items-center justify-center" id="theme-toggle">
 <span class="material-symbols-outlined text-[#fbb913]" id="theme-icon-light">light_mode</span>
 <span class="material-symbols-outlined text-[#f1f1f1] hidden" id="theme-icon-dark">dark_mode</span>
 </button>
-
 </div>
 </header>
+
 <!-- Section 2: Hero -->
 <header class="relative min-h-screen flex items-center pt-24 overflow-hidden bg-surface dark:bg-[#131313]" >
     <div class="hero-overlay">
@@ -218,6 +233,7 @@
         </div>
     </div>
 </header>
+
 <!-- Section 3: Benefícios (Bento Grid) -->
 <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="beneficios">
     <div class="text-center mb-16">
@@ -247,6 +263,7 @@
     </div>
     </div>
 </section>
+
 <!-- Section 4: Sobre -->
 <section class="py-section-gap relative bg-surface-container-low dark:bg-[#1c1b1b]">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -274,6 +291,7 @@
 </div>
 </div>
 </section>
+
 <!--Section Planos-->
 <div class="cards" id="planos">
 
@@ -422,6 +440,7 @@
     </div>
 
 </div>
+
 <!-- Section 5: Para quem é -->
 <section class="py-section-gap bg-surface-container-lowest dark:bg-[#0e0e0e]">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
@@ -452,6 +471,7 @@
 </div>
 </div>
 </section>
+
 <!-- Section 6: Diferenciais -->
 <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background dark:bg-[#131313]">
 <div class="max-w-3xl mx-auto glass-card p-12 rounded-[40px] relative overflow-hidden">
@@ -482,6 +502,7 @@
 </ul>
 </div>
 </section>
+
 <!-- Section 7: Processo -->
 <section class="py-section-gap bg-surface-container-high dark:bg-[#252525]">
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
@@ -563,6 +584,7 @@
 
     </div>
 </section>
+
 <!-- Section 8: CTA Final -->
 <section class="py-section-gap bg-background dark:bg-[#131313]">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
@@ -575,6 +597,7 @@
 </div>
 </div>
 </section>
+
 <!-- Section 9: FAQ -->
 <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface dark:bg-[#131313]" id="faq">
     <div class="max-w-3xl mx-auto">
@@ -646,6 +669,7 @@
         </div>
     </div>
 </section>
+
 <!-- Section 10: Footer -->
 <footer class="bg-surface-container-lowest dark:bg-[#0e0e0e] py-section-gap px-margin-mobile text-center border-t border-black/5 dark:border-white/5">
 <div class="max-w-container-max mx-auto flex flex-col gap-base items-center">
@@ -659,12 +683,14 @@
 <p class="font-body-md text-body-md text-on-surface-variant dark:text-gray-400 opacity-60">Desenvolvido por <a class="roxo" href="https://www.zyntekconnect.com.br" target="_blank">Zyntek</a></p>
 </div>
 </footer>
+
+<!-- Configurações JS-->
 <script>
         // Theme Toggle Logic
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIconLight = document.getElementById('theme-icon-light');
-        const themeIconDark = document.getElementById('theme-icon-dark');
-        const html = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIconLight = document.getElementById('theme-icon-light');
+    const themeIconDark = document.getElementById('theme-icon-dark');
+    const html = document.documentElement;
 
         function updateThemeIcons(isDark) {
             if (isDark) {
@@ -677,7 +703,7 @@
         }
 
         themeToggle.addEventListener('click', () => {
-            const isDark = html.classList.contains('dark');
+        const isDark = html.classList.contains('dark');
             if (isDark) {
                 html.classList.remove('dark');
                 html.classList.add('light');
@@ -691,8 +717,8 @@
             }
         });
 
-        // Initialize theme from storage
-        const savedTheme = localStorage.getItem('theme');
+    // Initialize theme from storage
+    const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             html.classList.add('dark');
             html.classList.remove('light');
@@ -701,11 +727,11 @@
             html.classList.add('light');
             html.classList.remove('dark');
             updateThemeIcons(false);
-        }
+    }
 
-        // Smooth scroll for anchors
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+     // Smooth scroll for anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+         anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
@@ -714,192 +740,149 @@
                     });
                 }
             });
-        });
+    });
 
-        // Simple observer for reveal animations
-        const observerOptions = {
+    // Simple observer for reveal animations
+    const observerOptions = {
             threshold: 0.1
-        };
+    };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, observerOptions);
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, observerOptions);
 
-        document.querySelectorAll('.glass-card').forEach(el => {
-            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
-            observer.observe(el);
+    document.querySelectorAll('.glass-card').forEach(el => {
+        el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+        observer.observe(el);
+    });
+
+    document.querySelectorAll(".card-planos").forEach(card=>{
+
+        const hidden=card.querySelector(".hidden");
+        const content=card.querySelector(".height");
+
+        card.addEventListener("mouseenter",()=>{
+
+            hidden.style.height=content.scrollHeight+"px";
+
+            card.classList.add("active");
+
         });
 
-document.querySelectorAll(".card-planos").forEach(card=>{
+        card.addEventListener("mouseleave",()=>{
 
-    const hidden=card.querySelector(".hidden");
-    const content=card.querySelector(".height");
+            hidden.style.height="0px";
 
-    card.addEventListener("mouseenter",()=>{
+            card.classList.remove("active");
 
-        hidden.style.height=content.scrollHeight+"px";
-
-        card.classList.add("active");
+        });
 
     });
 
-    card.addEventListener("mouseleave",()=>{
+    const buttons = document.querySelectorAll(".lang-btn");
 
-        hidden.style.height="0px";
+    buttons.forEach(button=>{
 
-        card.classList.remove("active");
+        button.addEventListener("click",()=>{
 
-    });
+            buttons.forEach(btn=>btn.classList.remove("active"));
 
-});
+            button.classList.add("active");
 
-const buttons = document.querySelectorAll(".lang-btn");
+            const lang = button.dataset.lang;
 
-buttons.forEach(button=>{
+            changeLanguage(lang);
 
-    button.addEventListener("click",()=>{
-
-        buttons.forEach(btn=>btn.classList.remove("active"));
-
-        button.classList.add("active");
-
-        const lang = button.dataset.lang;
-
-        changeLanguage(lang);
+        });
 
     });
 
-});
+    const logo = document.getElementById("logo");
 
-const logo = document.getElementById("logo");
-
-function atualizarLogo() {
-    if (document.body.classList.contains("dark")) {
-        logo.src = "saranetnova.png";
-    } else {
-        logo.src = "saranetnova2.png";
+    function atualizarLogo() {
+        if (document.body.classList.contains("dark")) {
+            logo.src = "saranetnova.png";
+        } else {
+            logo.src = "saranetnova2.png";
+        }
     }
-}
 
-// Executa ao carregar a página
-atualizarLogo();
-
-// Exemplo do botão de tema
-
-themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
+    // Executa ao carregar a página
     atualizarLogo();
-});
 
-let lastScroll = 0;
-const navbar = document.getElementById("navbar");
+    // Exemplo do botão de tema
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        atualizarLogo();
+    });
 
-window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset;
+    let lastScroll = 0;
+    const navbar = document.getElementById("navbar");
 
-    // Sempre mostra a navbar quando estiver no topo
-    if (currentScroll <= 0) {
-        navbar.classList.remove("hide");
+    window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+
+        // Sempre mostra a navbar quando estiver no topo
+        if (currentScroll <= 0) {
+            navbar.classList.remove("hide");
+            lastScroll = currentScroll;
+            return;
+        }
+
+        if (currentScroll > lastScroll) {
+            // Descendo
+            navbar.classList.add("hide");
+        } else {
+            // Subindo
+            navbar.classList.remove("hide");
+        }
+
         lastScroll = currentScroll;
-        return;
-    }
+    });
 
-    if (currentScroll > lastScroll) {
-        // Descendo
-        navbar.classList.add("hide");
-    } else {
-        // Subindo
-        navbar.classList.remove("hide");
-    }
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+    const closeMenu = document.getElementById("closeMenu");
 
-    lastScroll = currentScroll;
-});
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.add("active");
+    });
 
-const hamburger = document.getElementById("hamburger");
-const menu = document.getElementById("menuMobile");
+    closeMenu.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+</script>
 
+<!-- Botão Flutuante -->
+    <div class="fab-container">
 
-hamburger.addEventListener("click",()=>{
+        <input type="checkbox" id="fab-toggle">
+            <div class="fab-options">
 
-    hamburger.classList.toggle("active");
-    menu.classList.toggle("active");
+                <a href="https://wa.me/5544999999999" target="_blank" class="fab-option whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
 
-});
+                <a href="https://instagram.com/sarainformatica" target="_blank" class="fab-option instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
 
+                <a href="#" class="fab-option chatbot">
+                    <span class="material-symbols-outlined">smart_toy</span>
+                </a>
 
- </script>
+            </div>
 
-
-<div class="fab-container">
-
-    <input type="checkbox" id="fab-toggle">
-
-    <div class="fab-options">
-
-        <a href="https://wa.me/5544999999999" target="_blank" class="fab-option whatsapp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-
-        <a href="https://instagram.com/sarainformatica" target="_blank" class="fab-option instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-
-        <a href="#" class="fab-option chatbot">
-            <span class="material-symbols-outlined">smart_toy</span>
-        </a>
-
+        <label for="fab-toggle" class="fab-main">
+            <span class="material-symbols-outlined open">chat</span>
+            <span class="material-symbols-outlined close">close</span>
+        </label>
     </div>
-
-    <label for="fab-toggle" class="fab-main">
-        <span class="material-symbols-outlined open">chat</span>
-        <span class="material-symbols-outlined close">close</span>
-    </label>
-
-</div>
-
-<div class="chatbot">
-
-    <div class="chat-header">
-        <div>
-            <h4>SaraBot</h4>
-            <small>Online</small>
-        </div>
-
-        <button id="closeChat">
-            <span class="material-symbols-outlined">close</span>
-        </button>
-    </div>
-
-    <div id="chatMessages" class="chat-messages">
-
-        <div class="bot-message">
-            👋 Olá! Seja bem-vindo à SaraNet.
-
-            <br><br>
-
-            Como posso ajudar?
-
-            <br><br>
-
-            <button onclick="sendQuestion('planos')">📶 Planos</button>
-
-            <button onclick="sendQuestion('instalacao')">🛠 Instalação</button>
-
-            <button onclick="sendQuestion('cobertura')">📍 Cobertura</button>
-
-            <button onclick="sendQuestion('financeiro')">💳 Financeiro</button>
-
-        </div>
-
-    </div>
-
-</div>
-
 
 </body>
 </html>
