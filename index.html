@@ -166,52 +166,51 @@
 <body class="bg-background dark:bg-[#131313] text-on-background dark:text-[#f1f1f1]">
 <!-- Section 1: Header (TopAppBar) -->
 <header id="navbar" class=" navbar-glow fixed top-0 w-full z-50 bg-surface/20 dark:bg-[#131313]/50 backdrop-blur-1  border-black/5 dark:border-white/5 h-16 flex justify-between items-center  md:px-margin-desktop">
-<div class="flex items-center gap-2">
 
-<img
-    id="logo"
-    class="ml-4 h-10 w-auto"
-    src="saranetnova.png"
-    alt="SaraNet Logo">
-</div>
-
-<nav class="navbar">
-
-    <button class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-
-
-
-    <div class="nav-links flex items-center gap-8  " id="navLinks">
-        <div class="menu-header">
-        <button id="closeMenu" class="close-menu">
-                ✕
-            </button>
-        </div>
-        
-        <a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="#beneficios">Benefícios</a>
-
-        <a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="#planos">Planos</a>
-
-        <a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="#faq">Dúvidas</a>
-
-        <a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors"
-           href="https://www.speedtest.net/pt"
-           target="_blank">
-            Teste de Velocidade
-        </a>
+    <div class="flex items-center gap-2">
+    <img
+        id="logo"
+        class="ml-4 h-10 w-auto"
+        src="saranetnova.png"
+        alt="SaraNet Logo">
     </div>
 
-</nav>
-<div class="flex items-center gap-7 tema ml-auto">
-<button aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors flex items-center justify-center" id="theme-toggle">
-<span class="material-symbols-outlined text-[#fbb913]" id="theme-icon-light">light_mode</span>
-<span class="material-symbols-outlined text-[#f1f1f1] hidden" id="theme-icon-dark">dark_mode</span>
-</button>
-</div>
+    <div class="flex gap-7 md:ml-90" id="btn-tema">
+        <button aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors flex items-center" id="theme-toggle">
+        <span class="material-symbols-outlined text-[#fbb913]" id="theme-icon-light">light_mode</span>
+        <span class="material-symbols-outlined text-[#f1f1f1] hidden" id="theme-icon-dark">dark_mode</span>
+        </button>
+    </div>
+
+    <nav class="navbar">
+
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links flex items-center gap-8 " id="navLinks">
+            <div class="menu-header">
+            <button id="closeMenu" class="close-menu">
+                    ✕
+                </button>
+            </div>
+            
+            <a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="#beneficios">Benefícios</a>
+
+            <a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="#planos">Planos</a>
+
+            <a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors" href="#faq">Dúvidas</a>
+
+            <a class="font-label-bold text-label-bold text-on-surface text-white hover:text-primary-container transition-colors"
+            href="https://www.speedtest.net/pt"
+            target="_blank">
+                Teste de Velocidade
+            </a>
+        </div>
+    </nav>
+    
 </header>
 
 <!-- Section 2: Hero -->
