@@ -167,22 +167,14 @@
 <!-- Section 1: Header (TopAppBar) -->
 <header id="navbar" class=" navbar-glow fixed top-0 w-full z-50 bg-surface/20 dark:bg-[#131313]/50 backdrop-blur-1  border-black/5 dark:border-white/5 h-16 flex justify-between items-center  md:px-margin-desktop">
 
-    <div class="flex items-center gap-2">
-    <img
-        id="logo"
-        class="ml-4 h-10 w-auto"
-        src="saranetnova.png"
-        alt="SaraNet Logo">
-    </div>
-
-    <div class="flex gap-7 md:ml-90" id="btn-tema">
-        <button aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors flex items-center" id="theme-toggle">
-        <span class="material-symbols-outlined text-[#fbb913]" id="theme-icon-light">light_mode</span>
-        <span class="material-symbols-outlined text-[#f1f1f1] hidden" id="theme-icon-dark">dark_mode</span>
-        </button>
-    </div>
-
     <nav class="navbar">
+        <div class="flex items-center gap-2">
+            <img
+            id="logo"
+            class="ml-4 h-10 w-auto"
+            src="saranetnova.png"
+            alt="SaraNet Logo">
+        </div>
 
         <button class="hamburger" id="hamburger">
             <span></span>
@@ -209,6 +201,13 @@
                 Teste de Velocidade
             </a>
         </div>
+
+        <div class="flex gap-7 md:ml-" id="btn-tema">
+        <button aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors flex items-center" id="theme-toggle">
+        <span class="material-symbols-outlined text-[#fbb913]" id="theme-icon-light">light_mode</span>
+        <span class="material-symbols-outlined text-[#f1f1f1] hidden" id="theme-icon-dark">dark_mode</span>
+        </button>
+    </div>
     </nav>
     
 </header>

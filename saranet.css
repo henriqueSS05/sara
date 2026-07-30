@@ -655,6 +655,34 @@ details[open]{
     transform:rotate(0);
 }
 
+.navbar{
+    display:grid;
+    grid-template-columns: auto 1fr auto;
+    align-items:center;
+    padding:0 32px;
+}
+
+/* Logo */
+.logo{
+    justify-self:start;
+    margin-left: 200px;
+}
+
+/* Menu */
+.nav-links{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+}
+
+/* Botões */
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    justify-self:end;
+}
+
 /* ===========================
    MENU HAMBÚRGUER
 =========================== */
@@ -780,13 +808,4 @@ details[open]{
     .nav-links a:hover{
         color:#fbb913;
     }
-
-
-
-}
-
-#btn-tema{
-    display: flex;
-    position: fixed;
-    left: 290px;
 }
